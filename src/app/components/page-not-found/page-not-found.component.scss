@@ -1,0 +1,11 @@
+div {
+    text-align: center;
+    -webkit-box-shadow: var(--shadow-effect);
+    box-shadow: var(--shadow-effect);
+    border-radius: var(--curve-effect);
+    margin: var(--mt) var(--mlr) 0em var(--mlr);
+    padding: 1em;
+    p {
+        font-size: 1.5em;
+    }
+}

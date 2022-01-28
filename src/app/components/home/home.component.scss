@@ -1,0 +1,120 @@
+.search {
+    display: flex;
+    flex-flow: row wrap;
+
+    &-child {
+        text-align: center;
+        flex-basis: 100%;
+
+        button {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            font-size: 1rem;
+            padding: 0.2rem 1rem;
+        }
+    }
+
+    &-form,
+    &-form-full-width {
+        width: 100%;
+
+        .fontAwesomeIcon {
+            font-family: "Helvetica", FontAwesome, sans-serif;
+        }
+    }
+}
+
+table {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.bottom {
+    #map {
+        min-height: 30em;
+        -webkit-box-shadow: var(--shadow-effect);
+        box-shadow: var(--shadow-effect);
+        border-radius: var(--curve-effect);
+    }
+}
+
+.loader {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.loader {
+    .spinner {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid var(--primary-color);
+        width: 100px;
+        min-height: 100px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .search {
+        justify-content: center;
+
+        &-child:first-of-type {
+            text-align: left;
+            flex-basis: 50%;
+        }
+        &-child:last-of-type {
+            padding: 0.2em 0 0 0.5em;
+            flex-basis: auto;
+        }
+    }
+
+    .bottom {
+        #map {
+            min-height: 35em;
+        }
+    }
+
+    .loader {
+        .spinner {
+            width: 120px;
+            min-height: 120px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .bottom {
+        #map {
+            min-height: 40em;
+        }
+    }
+    table {
+        margin: 0 auto;
+        width: 60%;
+    }
+}

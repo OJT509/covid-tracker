@@ -1,0 +1,8 @@
+<div class="error-dialog">
+  <h1>There was a problem</h1>
+  <p>{{message}}</p>
+  <div class="select-button">
+    <button class="select-button-primary" (click)="retryPage()" mat-raised-button>Retry</button>
+    <button class="select-button-secondary" (click)="closeDialog()" mat-raised-button>Cancel</button>
+  </div>
+</div>

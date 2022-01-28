@@ -1,0 +1,18 @@
+.error-dialog {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+
+    .select-button {
+        &-primary {
+            background-color: var(--primary-color);
+            color: white;
+            margin-right: 1em;
+        }
+
+        &-secondary {
+            background-color: var(--secondary-color);
+            margin-left: 1em;
+        }
+    }
+}
